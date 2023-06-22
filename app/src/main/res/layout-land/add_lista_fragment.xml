@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/nova_lista_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:autofillHints="name"
+        android:ems="10"
+        android:hint="@string/nova_lista_str"
+        android:inputType="text"
+        android:labelFor="@id/nova_lista_text"
+        android:textColor="@color/txtColor"
+        android:textColorHint="@color/txtColor"
+        android:backgroundTint="@color/txtColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/nova_lista_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="@string/btn_add_lista_str"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:icon="@android:drawable/ic_menu_add"
+        app:iconTint="#1BDC23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nova_lista_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

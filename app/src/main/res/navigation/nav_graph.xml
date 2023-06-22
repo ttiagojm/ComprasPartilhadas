@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/listasFragment"
+        android:name="com.example.projeto.ListasFragment"
+        android:label="@string/listas_de_compras">
+        <action
+            android:id="@+id/action_listasFragment_to_itemFragment2"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_listasFragment_to_novaListaFragment"
+            app:destination="@id/novaListaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.example.projeto.ItemFragment"
+        android:label="@string/lista_listname"
+        tools:layout="@layout/fragment_item_list">
+        <argument
+            android:name="listId"
+            app:argType="long" />
+        <argument
+            android:name="listName"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_itemFragment_to_listasFragment2"
+            app:destination="@id/listasFragment" />
+        <action
+            android:id="@+id/action_itemFragment_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
+        <action
+            android:id="@+id/action_itemFragment_to_adicionaItem"
+            app:destination="@id/adicionaItem" />
+        <action
+            android:id="@+id/action_itemFragment_to_associarFragment"
+            app:destination="@id/associarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/produtoFragment"
+        android:name="com.example.projeto.ProdutoFragment"
+        android:label="{nomeProduto}">
+        <argument
+            android:name="listId"
+            app:argType="long" />
+
+        <argument
+            android:name="listName"
+            app:argType="string" />
+
+        <argument
+            android:name="itemId"
+            app:argType="long" />
+
+        <argument
+            android:name="nomeProduto"
+            app:argType="string" />
+        <argument
+            android:name="precoProduto"
+            app:argType="float" />
+
+        <argument
+            android:name="imagePath"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_produtoFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/novaListaFragment"
+        android:name="com.example.projeto.NovaListaFragment"
+        android:label="@string/adicionar_nova_lista">
+        <action
+            android:id="@+id/action_novaListaFragment_to_listasFragment"
+            app:destination="@id/listasFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/produtos"
+        android:name="com.example.projeto.ProdutosFragment"
+        android:label="@string/all_items"
+        tools:layout="@layout/fragment_produtos_list">
+        <argument
+            android:name="listId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_produtos_to_itemFragment"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_produtos_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.projeto.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_listasFragment"
+            app:destination="@id/listasFragment"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_loginFragment_self"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adicionaItem"
+        android:name="com.example.projeto.AdicionaItem"
+        android:label="@string/add_item_title" >
+        <action
+            android:id="@+id/action_adicionaItem_to_itemFragment"
+            app:destination="@id/itemFragment" />
+
+        <argument
+            android:name="listId"
+            app:argType="long" />
+        <argument
+            android:name="listName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/associarFragment"
+        android:name="com.example.projeto.AssociarFragment"
+        android:label="@string/Association">
+
+        <argument
+            android:name="listId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_associarFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.projeto.RegistoFragment"
+        android:label="@string/registo"
+        tools:layout="@layout/fragment_registo" >
+        <action
+            android:id="@+id/action_blankFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/search_bar"
+        android:title="@string/search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/empty"
+        android:title="@string/options"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@drawable/dots">
+
+        <menu>
+
+            <item android:id="@+id/action_listas"
+                android:icon="@drawable/baseline_checklist_24"
+                app:showAsAction="ifRoom"
+                android:title="@string/lists" />
+
+            <item android:id="@+id/action_delete_user"
+                android:icon="@drawable/baseline_delete_24"
+                app:showAsAction="ifRoom"
+                android:title="@string/delete_user" />
+
+            <item android:id="@+id/action_settings"
+                android:icon="@android:drawable/ic_menu_preferences"
+                app:showAsAction="ifRoom"
+                android:title="@string/logout" />
+
+        </menu>
+
+    </item>
+</menu>

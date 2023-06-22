@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/nome_item"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="1dp"
+        android:autofillHints="emailAddress"
+        android:backgroundTint="@color/txtColor"
+        android:ems="10"
+        android:hint="@string/insert_item_name"
+        android:inputType="text"
+        android:labelFor="@id/nome_item"
+        android:textColor="@color/txtColor"
+        android:textColorHint="@color/txtColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/preco_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367"
+        tools:ignore="LabelFor" />
+
+
+    <Button
+        android:id="@+id/novo_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="@string/btn_add_lista_str"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:icon="@android:drawable/btn_star_big_on"
+        app:iconTint="#E1E644"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inserir_img" />
+
+    <EditText
+        android:id="@+id/preco_item"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="1dp"
+        android:autofillHints="emailAddress"
+        android:backgroundTint="@color/txtColor"
+        android:ems="10"
+        android:hint="@string/price_new_item"
+        android:inputType="numberDecimal"
+        android:labelFor="@id/nome_item"
+        android:textColor="@color/txtColor"
+        android:textColorHint="@color/txtColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nome_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/inserir_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#2196F3"
+        android:text="@string/add_image"
+        android:textStyle="bold"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconTint="#0CD54F"
+        app:layout_constraintBottom_toTopOf="@+id/novo_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>
